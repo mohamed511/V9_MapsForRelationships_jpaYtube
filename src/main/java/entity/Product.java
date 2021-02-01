@@ -16,6 +16,7 @@ public class Product {
     @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
+    //getter and setter
     public int getId() {
         return id;
     }
