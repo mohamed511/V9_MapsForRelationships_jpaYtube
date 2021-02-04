@@ -7,19 +7,25 @@ import java.time.LocalDate;
 @Table(name = "product")
 public class Product {
     @Id
-    private int id;
-    @Basic(optional = false)
+    @TableGenerator(name="any_generator",
+            table = "my_generator",
+            pkColumnName = "test_name",
+            pkColumnValue = "product_seq",
+            valueColumnName = "test_value")
+    @GeneratedValue(strategy = GenerationType.TABLE,generator = "any_generator")
+    private Integer id;
+    //@Basic(optional = false)
     private String name;
     private double price;
     @Column(name = "expiration_date")
     private LocalDate expirationDate;
 
     //getter and setter
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

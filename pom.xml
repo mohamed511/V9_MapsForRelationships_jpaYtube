@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jpa.test</groupId>
-    <artifactId>EntityContext_V1_jpaYtube</artifactId>
+    <artifactId>IdAndGeneratingValues_V2_jpaYtube</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

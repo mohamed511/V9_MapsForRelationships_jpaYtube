@@ -1,5 +1,6 @@
 package main;
 
+import entity.Event;
 import entity.Product;
 
 import javax.persistence.EntityManager;
@@ -15,15 +16,18 @@ public class main {
         //create entity manager
         EntityManager em = emf.createEntityManager();
         // create a product
-        Product p = new Product();
-        p.setId(100);
-        p.setName("table");
-        p.setPrice(250);
-        p.setExpirationDate(LocalDate.now());
+        // Product p = new Product();
+        //p.setId(2);
+        //p.setName("strategy_table_4");
+        //p.setPrice(4000);
+        //p.setExpirationDate(LocalDate.now());
+        Event e1 = new Event();
+        e1.setDescription("Event 10 ");
+
         try{
             // get transaction
             em.getTransaction().begin();
-            em.persist(p); // adding the instance in the context
+            em.persist(e1); // adding the instance in the context
             em.getTransaction().commit();
             em.close();
         }catch (Exception e){
