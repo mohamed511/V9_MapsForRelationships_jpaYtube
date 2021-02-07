@@ -10,6 +10,7 @@
         <module name="V3_EnumeratedAndTemporalTypes_jpaYtube" />
         <module name="V2_IdAndGeneratingIdValues_jpaYtube" />
         <module name="IdAndGeneratingIdValues_V2_jpaYtube" />
+        <module name="V4_AttributeOverrideAndComposedPK_jpaYtube" />
       </profile>
     </annotationProcessing>
   </component>
