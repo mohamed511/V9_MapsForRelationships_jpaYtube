@@ -25,8 +25,10 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("==========> ");
-           
-           // em.persist(c);
+            Company c = new Company();
+            c.setName("X_3");
+            c.setAddress(new Address("3","street_3","City_3"));
+            em.persist(c);
             em.getTransaction().commit();
             em.close();
         }catch (Exception e){

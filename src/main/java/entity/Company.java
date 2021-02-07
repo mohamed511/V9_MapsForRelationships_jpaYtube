@@ -12,7 +12,11 @@ public class Company {
     private int id;
     @Column(name = "name")
     private String name;
+
     @Embedded
+    @AttributeOverride(name = "buildingNo", column = @Column(name = "building_num"))
+    @AttributeOverride(name = "str", column = @Column(name = "street"))
+    @AttributeOverride(name = "city", column = @Column(name = "city"))
     private Address address;
 
     public int getId() {

@@ -1,40 +1,36 @@
 package entity.embeddable;
 
-import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Address {
-    @Column(name = "building_num")
-    private String buildingNum;
-    @Column(name = "street")
-    private String Street;
-    @Column(name = "city")
+    private String buildingNo;
+    private String str;
     private String city;
 
     public Address() {
     }
 
-    public Address(String buildingNum, String street, String city) {
-        this.buildingNum = buildingNum;
-        this.Street = street;
+    public Address(String buildingNo, String str, String city) {
+        this.buildingNo = buildingNo;
+        this.str = str;
         this.city = city;
     }
 
-    public String getBuildingNum() {
-        return buildingNum;
+    public String getBuildingNo() {
+        return buildingNo;
     }
 
-    public void setBuildingNum(String buildingNum) {
-        this.buildingNum = buildingNum;
+    public void setBuildingNo(String buildingNo) {
+        this.buildingNo = buildingNo;
     }
 
-    public String getStreet() {
-        return Street;
+    public String getStr() {
+        return str;
     }
 
-    public void setStreet(String street) {
-        Street = street;
+    public void setStr(String str) {
+        this.str = str;
     }
 
     public String getCity() {
