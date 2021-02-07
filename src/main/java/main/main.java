@@ -9,6 +9,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 public class main {
     public static void main(String[] args) {
@@ -22,10 +25,14 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("==========> ");
-            Price p = new Price();
-            p.setAmount(100);
-            p.setCurrency(Currency.EUR);
-            em.persist(p);
+//            Price p = new Price();
+//            p.setAmount(100);
+//            p.setCurrency(Currency.EUR);
+            Event e = new Event();
+            e.setEventTime(LocalDateTime.now());
+
+            e.setDescription("hello event ");
+            em.persist(e);
             em.getTransaction().commit();
             em.close();
         }catch (Exception e){
