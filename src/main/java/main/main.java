@@ -1,5 +1,6 @@
 package main;
 
+import entity.Employee;
 import entity.Event;
 import entity.Price;
 import entity.Product;
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.Date;
 
 public class main {
     public static void main(String[] args) {
@@ -25,14 +27,9 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("==========> ");
-//            Price p = new Price();
-//            p.setAmount(100);
-//            p.setCurrency(Currency.EUR);
-            Event e = new Event();
-            e.setEventTime(LocalDateTime.now());
-
-            e.setDescription("hello event ");
-            em.persist(e);
+            Employee emp = new Employee();
+            emp.setEmployeeDate(new Date());
+            em.persist(emp);
             em.getTransaction().commit();
             em.close();
         }catch (Exception e){
