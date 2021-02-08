@@ -3,6 +3,7 @@ package main;
 import entity.*;
 import entity.embeddable.Address;
 import entity.enums.Currency;
+import entity.pk.DepartmentPk;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -25,10 +26,11 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("==========> ");
-            Company c = new Company();
-            c.setName("X_3");
-            c.setAddress(new Address("3","street_3","City_3"));
-            em.persist(c);
+            Department department = new Department();
+            department.setName("B_2");
+            department.setCode("B");
+            department.setNumber(2);
+            em.persist(department);
             em.getTransaction().commit();
             em.close();
         }catch (Exception e){
