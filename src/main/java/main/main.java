@@ -2,6 +2,7 @@ package main;
 
 import entity.*;
 import entity.embeddable.Address;
+import entity.embeddable.BuildingPk;
 import entity.enums.Currency;
 import entity.pk.DepartmentPk;
 
@@ -22,18 +23,19 @@ public class main {
         //create entity manager
         EntityManager em = emf.createEntityManager();
 
-        try{
+        try {
             // get transaction
             em.getTransaction().begin();
             System.out.println("==========> ");
-            Department department = new Department();
-            department.setName("B_2");
-            department.setCode("B");
-            department.setNumber(2);
-            em.persist(department);
+            Building building = new Building();
+            building.setName("D_4");
+            building.setBuildingPk(new BuildingPk());
+            building.getBuildingPk().setCode("D");
+            building.getBuildingPk().setNumber(4);
+            em.persist(building);
             em.getTransaction().commit();
             em.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             em.getTransaction().rollback();
             em.close();
         }
