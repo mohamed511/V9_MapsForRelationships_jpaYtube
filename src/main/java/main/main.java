@@ -2,6 +2,8 @@ package main;
 
 
 import entity.Company;
+import entity.Detail;
+import entity.Product;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -19,12 +21,13 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("Start...");
-            Company c = new Company();
-            c.setName("C1");
-            c.setStreet("S1");
-            c.setNumber("1");
-            c.setDetails("is third table");
-            em.persist(c);
+            Product p = em.find(Product.class,7);
+            System.out.println(p);
+//            Product product = new Product("orange", 20);
+//            em.persist(product);
+//            Detail detail = new Detail(20, product);
+//            product.setDetail(detail);
+//            em.persist(detail);
             em.getTransaction().commit();
             em.close();
         } catch (Exception e) {
