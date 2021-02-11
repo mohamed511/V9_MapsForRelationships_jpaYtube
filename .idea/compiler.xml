@@ -8,9 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EntityContext_V1_jpaYtube" />
         <module name="V3_EnumeratedAndTemporalTypes_jpaYtube" />
+        <module name="V6_OneToManyAndManyToOne_jpaYtube" />
+        <module name="IdAndGeneratingIdValues_V2_jpaYtube" />
         <module name="V2_IdAndGeneratingIdValues_jpaYtube" />
         <module name="V5_OneToOneandSecondaryTables_jpaYtube" />
-        <module name="IdAndGeneratingIdValues_V2_jpaYtube" />
         <module name="V4_AttributeOverrideAndComposedPK_jpaYtube" />
       </profile>
     </annotationProcessing>
