@@ -12,6 +12,7 @@
         <module name="V7_ManyToMany_jpaYtube" />
         <module name="IdAndGeneratingIdValues_V2_jpaYtube" />
         <module name="V2_IdAndGeneratingIdValues_jpaYtube" />
+        <module name="V8_AssoAndElement_jpaYtube" />
         <module name="V5_OneToOneandSecondaryTables_jpaYtube" />
         <module name="V4_AttributeOverrideAndComposedPK_jpaYtube" />
       </profile>
