@@ -1,6 +1,10 @@
 package main;
 
 
+import entity.Department;
+import entity.DepartmentDetail;
+import entity.Employee;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -18,7 +22,13 @@ public class main {
             // get transaction
             em.getTransaction().begin();
             System.out.println("Start...");
-
+            Department department = new Department("I_T");
+            DepartmentDetail dd = new DepartmentDetail("C2", department);
+            Employee employee = new Employee("emp1", dd);
+            Employee employee2 = new Employee("emp2", dd);
+            em.persist(department);
+            em.persist(employee);
+            em.persist(employee2);
             em.getTransaction().commit();
             em.close();
         } catch (Exception e) {
