@@ -34,9 +34,7 @@ public class main {
 //            em.persist(professor);
 //            em.persist(student);
 
-            Document document = new Document(1,"DC1");
-            Person person = new Person("Yasser",Arrays.asList("1994","1999"),Arrays.asList(document));
-            em.persist(person);
+
             em.getTransaction().commit();
             em.close();
         } catch (Exception e) {
