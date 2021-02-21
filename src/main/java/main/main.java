@@ -28,11 +28,15 @@ public class main {
 //            em.persist(department);
 //            em.persist(employee);
 //            em.persist(employee2);
-            Professor professor = new Professor("prof");
-            ProfessorDetail pd = new ProfessorDetail(Arrays.asList(professor));
-            Student student = new Student("Aly", pd);
-            em.persist(professor);
-            em.persist(student);
+//            Professor professor = new Professor("prof");
+//            ProfessorDetail pd = new ProfessorDetail(Arrays.asList(professor));
+//            Student student = new Student("Aly", pd);
+//            em.persist(professor);
+//            em.persist(student);
+
+            Document document = new Document(1,"DC1");
+            Person person = new Person("Yasser",Arrays.asList("1994","1999"),Arrays.asList(document));
+            em.persist(person);
             em.getTransaction().commit();
             em.close();
         } catch (Exception e) {
