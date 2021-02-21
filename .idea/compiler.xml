@@ -10,6 +10,7 @@
         <module name="V3_EnumeratedAndTemporalTypes_jpaYtube" />
         <module name="V6_OneToManyAndManyToOne_jpaYtube" />
         <module name="V7_ManyToMany_jpaYtube" />
+        <module name="V9_MapsForRelationships_jpaYtube" />
         <module name="IdAndGeneratingIdValues_V2_jpaYtube" />
         <module name="V2_IdAndGeneratingIdValues_jpaYtube" />
         <module name="V8_AssoAndElement_jpaYtube" />
