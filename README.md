@@ -1,2 +1,2 @@
-# V7_ManyToMany_jpaYtube
+# V9_MapsForRelationships_jpaYtube
 practice Many to Many relation
